@@ -1,12 +1,28 @@
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
+// Resize canvas to fit screen and handle high-DPI displays
+function resizeCanvas() {
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  const width = window.innerWidth * 0.9; // 90% of window width
+  const height = window.innerHeight * 0.9; // 90% of window height
+  
+  canvas.width = width * devicePixelRatio;
+  canvas.height = height * devicePixelRatio;
+
+  canvas.style.width = `${width}px`;
+  canvas.style.height = `${height}px`;
+
+  ctx.scale(devicePixelRatio, devicePixelRatio); // Adjust for high-DPI screens
+}
+
+// Ball properties
 let ball = {
   x: canvas.width / 2,
   y: canvas.height / 2,
   radius: 10,
-  dx: 2, // Horizontal velocity
-  dy: 2, // Vertical velocity
+  dx: 2,
+  dy: 2,
   color: "#3498db"
 };
 
@@ -45,6 +61,10 @@ function gameLoop() {
   updateBall(); // Update and draw the ball
   requestAnimationFrame(gameLoop); // Repeat
 }
+
+// Initial setup
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas); // Resize when window is resized
 
 // Start the game
 gameLoop();
