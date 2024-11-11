@@ -1,30 +1,112 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-<head>
-    <title>No Flights Planned</title>
-    <style>
-        body {
-            background-color: #333; 
+  <style>
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        
             text-align: center;
-font-family: Arial, sans-serif;
-
         }
-
-        .paper-icon {
-            display: inline-block;
-            padding: 20px;
+      
+      h3 {
+color: #FF0000;
+      }
+        header {
+            background-color: #A020F0;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+           font-weight: bold;
+          font-size: 1cm;
+        }
+    .container {
+            width: 90%;
+            margin: 2rem auto;
             background-color: white;
-            border-radius: 10px;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); 
+            
+            border-radius: 8px;
+            overflow: hidden;
         }
-    </style>
+    .updates {
+            width: 90%;
+            margin: 2rem auto;
+            background-color: white;
+            border: solid; black;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+    table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 1rem;
+            text-align: left;
+}
+th {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+    
+
+</style>
+  <head>
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="WizzAir Roblox 2024" />
+    <meta property="og:description" content="Fly with WizzAir Roblox today." />
+    <meta property="og:image" content="URL_to_your_image.jpeg" />
+    <meta property="og:url" content="https://wizzairroblox.glitch.me" />
+    <meta property="og:type" content="website" />
+    
+
 </head>
 <body>
-<h1>📃</h1>
-<br>
-<br>
-    <div class="paper-icon">
-        <p>No flights planned.</p>
+  <title>WZZ-002 Flight | WIZZAIR ROBLOX</title>
+  <header>Flight 002 - WIZZAIR - Planned</header>
+  <h5>
+    Join us on our adventure through poland to a special destination! Fly WizzAir roblox today!
+  </h5>
+  <img src="https://cdn.glitch.global/ce790659-a590-4091-8910-96e19fcdfc35/IMG_5692.png?v=1719851211779">
+  <div class="updates" id="one-container">
+
+<h3>
+  Updates
+    </h3>
+    <h4>
+      The flight has been planned.
+    </h4>
+<h2>
+    More information:
+  </h2>
+   <div class="container" id="flights-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Flight Number</th>
+                    <th>Airport</th>
+                  <th>Arrival Airport</th>
+                    <th>Departure Time (BST)</th>
+                    <th>Arrival Time (BST)</th>
+                    <th>Status</th>
+                  
+                </tr>
+            </thead>
+            <tbody id="flights-list">
+                <tr>
+                    <td>WZZ-002</td>
+                    <td>Krakow Airport</td>
+                  <td>Rome Fiumicino Airport</td>
+                    <td>17:45</td>
+                    <td>18:25</td>
+                    <td>Planned</td>
+                  
+                </tr>
+                <!-- More flight rows as needed -->
+            </tbody>
+        </table>
     </div>
-</body>
+  </body>
 </html>
